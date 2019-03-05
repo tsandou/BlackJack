@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DeckBean {
 
-	private ArrayList<domain.CardBean> list;
+	private ArrayList<CardBean> list;
 
 	public DeckBean() {
 		list = new ArrayList<>();
@@ -20,6 +20,16 @@ public class DeckBean {
 	 * méthodes
 	 */
 
+	@Override
+	public String toString() {
+		String deckToString = "";
+		for (CardBean cardBean : list) {
+			deckToString += cardBean.toString();
+		}
+		return deckToString;
+	}
+
+	@Deprecated
 	public void printDeck() {
 		for (CardBean card : list) {
 			System.out.println(card.getValue() + " de " + card.getCouleur());

@@ -2,7 +2,7 @@ package domain;
 
 public class CardBean {
 	private FaceEnum face;
-	private ColorEnum couleur;
+	private ColorEnum color;
 
 	/*
 	 * constructeur
@@ -11,7 +11,16 @@ public class CardBean {
 	public CardBean(FaceEnum face, ColorEnum couleur) {
 		super();
 		this.face = face;
-		this.couleur = couleur;
+		color = couleur;
+	}
+
+	/*
+	 * (non-Javadoc) * @see java.lang.Object#toString()
+	 */
+
+	@Override
+	public String toString() {
+		return face + " de " + color + "\n";
 	}
 
 	/*
@@ -23,7 +32,7 @@ public class CardBean {
 	}
 
 	public ColorEnum getCouleur() {
-		return couleur;
+		return color;
 	}
 
 }

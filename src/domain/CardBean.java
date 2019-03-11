@@ -14,6 +14,10 @@ public class CardBean {
 		color = couleur;
 	}
 
+	public CardBean() {
+		super();
+	}
+
 	/*
 	 * (non-Javadoc) * @see java.lang.Object#toString()
 	 */

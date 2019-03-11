@@ -1,6 +1,7 @@
 package domain;
 
 public class PlayerBean {
+
 	private String name;
 	private HandBean hand;
 

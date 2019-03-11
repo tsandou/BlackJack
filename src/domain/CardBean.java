@@ -25,19 +25,19 @@ public class CardBean {
 	/* override de la méthode générale String pour afficher la carte en string */
 	@Override
 	public String toString() {
-		return face + " de " + color + "\n";
+		return face + " de " + color;
 	}
 
 	/*
 	 * getters / setters
 	 */
 
-	public FaceEnum getValue() {
-		return face;
-	}
-
 	public ColorEnum getCouleur() {
 		return color;
+	}
+
+	public FaceEnum getFace() {
+		return face;
 	}
 
 }

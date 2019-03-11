@@ -2,12 +2,10 @@ package domain;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class DeckBean {
 
 	private ArrayList<CardBean> list;
-	private Random randomGenerator;
 
 	public DeckBean() {
 		list = new ArrayList<>();
@@ -22,6 +20,16 @@ public class DeckBean {
 	/*
 	 * méthodes
 	 */
+
+	public DeckBean prepare() {
+		DeckBean deck = new DeckBean();
+		// deck.printDeck();
+		System.out.println("Le paquet contient " + deck.getDeckNbOfCards() + " cartes. \n");
+		deck.shuffle();
+		// afficher le deck
+		System.out.println(deck);
+		return deck;
+	}
 
 	/* override de la méthode générale String pour afficher le deck en string */
 	@Override
@@ -39,7 +47,7 @@ public class DeckBean {
 	@Deprecated
 	public void printDeck() {
 		for (CardBean card : list) {
-			System.out.println(card.getValue() + " de " + card.getCouleur());
+			System.out.println(card.getFace() + " de " + card.getCouleur());
 		}
 	}
 
